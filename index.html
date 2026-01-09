@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="top-bar">
+    <h1>Task Tracker</h1>
+    </header>
+
+
+    <!-- ADD TASK CARD -->
+    <div class="add-card" id="addCard">
+      <input type="text" id="taskInput" placeholder="Add a task..." />
+      <button onclick="addTask()">✓</button>
+    </div>
+
+    <!-- MAIN DASHBOARD -->
+    <div class="dashboard hidden" id="dashboard">
+
+
+    <div class="card todo">
+        <h3>To Do</h3>
+
+        <div class="task-container">
+        <ul id="todoList"></ul>
+        </div>
+    </div>
+
+    
+    <div class="card completed">
+        <h3>Task Done</h3>
+
+        <div class="progress-container">
+        <svg width="120" height="120">
+            <circle cx="60" cy="60" r="50" />
+            <circle cx="60" cy="60" r="50" id="progressCircle" />
+        </svg>
+        <p id="progressText">0%</p>
+        </div>
+
+        <div class="task-container">
+        <ul id="completedList"></ul>
+        </div>
+    </div>
+
+    </div>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
